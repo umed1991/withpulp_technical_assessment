@@ -1,0 +1,18 @@
+<?php
+
+/**
+ * @file
+ * Module file.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function withpulp_technical_assessment_theme() {
+  return [
+    'weather_data_field_formatter' => [
+      'variables' => ['weather_data' => []],
+      'template' => 'weather-data-field-formatter',
+    ],
+  ];
+}

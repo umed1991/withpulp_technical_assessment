@@ -1,0 +1,7 @@
+name: 'WithPulp Techinical Assessment'
+description: 'Add a field formatter for weather forcast'
+type: 'module'
+core: '8.x'
+package: 'Technical Assessment'
+dependencies:
+  - field

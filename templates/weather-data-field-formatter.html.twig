@@ -1,0 +1,20 @@
+{{ attach_library('withpulp_technical_assessment/weather-widget') }}
+<div class="widget">
+<div class="weatherIcon"><i class="wi wi-day-cloudy"></i></div>
+   <div class="left-panel panel">
+     {% if weather_data.main %}
+      <div class="date">{{weather_data.date}}</div>
+      <div class="city"> {{weather_data.name}}, {{weather_data.sys.country}} </div>
+      <div class="main"> {{weather_data.weather.0.main}}</div>
+      <div class="temp">{{weather_data.main.temp}}&deg;</div>
+      <div class="min-temp">Min Temp: {{weather_data.main.temp_min}}&deg;</div>
+      <div class="max-temp">Max Temp: {{weather_data.main.temp_max}}&deg;</div>
+      <div class="humidity">Humidity: {{weather_data.main.humidity}}</div>
+      <div class="wind"> Wind: {{weather_data.wind.speed}}</div>
+      <div class="sunrise">Sunrise: {{weather_data.sunrise}}</div>
+      <div class="sunset">Sunset: {{weather_data.sunset}}</div>
+     {% else %}
+      <div class="error-message"><h3>Error: {{weather_data.message}}</h3></div>
+     {% endif %}
+    </div>
+ </div>
