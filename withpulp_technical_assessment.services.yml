@@ -1,0 +1,3 @@
+services:
+ withpulp.weather_forecast:
+   class: Drupal\withpulp_technical_assessment\WeatherForecastService
