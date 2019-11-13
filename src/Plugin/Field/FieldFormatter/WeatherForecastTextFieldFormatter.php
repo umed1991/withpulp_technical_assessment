@@ -38,6 +38,7 @@ class WeatherForecastTextFieldFormatter extends FormatterBase {
       foreach ($items as $delta => $item) {
         // Call weather forecast service to get weather data.
         $weather_data_service = \Drupal::service('withpulp.weather_forecast');
+        // Hardcoding country because this module should only support USA cities.
         $weather_data = $weather_data_service->getWeatherForecast($item->value, 'US');
         $elements[$delta] = [
           '#theme' => 'weather_data_field_formatter',
